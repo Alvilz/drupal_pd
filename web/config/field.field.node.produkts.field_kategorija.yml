@@ -1,0 +1,39 @@
+uuid: 0ed7ec8a-5941-4500-93fe-55b957b70e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kategorija
+    - node.type.produkts
+    - taxonomy.vocabulary.produktu_katalogs
+  content:
+    - 'taxonomy_term:produktu_katalogs:25c8e821-8479-4c23-9078-b450235ad758'
+    - 'taxonomy_term:produktu_katalogs:5ea1e360-1ebe-42b2-afc3-eacbc7146578'
+    - 'taxonomy_term:produktu_katalogs:c0c6c4eb-b77e-4d5b-8097-b767dbb05bfb'
+id: node.produkts.field_kategorija
+field_name: field_kategorija
+entity_type: node
+bundle: produkts
+label: Kategorija
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 25c8e821-8479-4c23-9078-b450235ad758
+  -
+    target_uuid: 5ea1e360-1ebe-42b2-afc3-eacbc7146578
+  -
+    target_uuid: c0c6c4eb-b77e-4d5b-8097-b767dbb05bfb
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      produktu_katalogs: produktu_katalogs
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
